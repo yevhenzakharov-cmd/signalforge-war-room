@@ -1,0 +1,32 @@
+[
+  {
+    "id": "comp_datapulse",
+    "name": "DataPulse Gaming",
+    "category": "Game analytics platform",
+    "positioning": "Analytics dashboards for live game teams focused on retention, monetization, and cohort behavior.",
+    "strengths": ["clear game analytics positioning", "strong dashboard messaging", "publisher-friendly reporting"],
+    "weaknesses": ["less emphasis on cross-department action workflows", "limited evidence of AI-assisted account intelligence"],
+    "watchedSignals": ["sig_competitor_pricing_update"],
+    "salesObjections": ["We already have analytics dashboards.", "Our BI team can build this internally."]
+  },
+  {
+    "id": "comp_playintel",
+    "name": "PlayIntel Labs",
+    "category": "Market intelligence and competitor research",
+    "positioning": "Market research briefs and competitive reports for game publishers and studios.",
+    "strengths": ["strong research brand", "easy for executives to understand", "good fit for strategy teams"],
+    "weaknesses": ["manual report delivery", "less operational integration with CRM/support/product data"],
+    "watchedSignals": ["sig_playintel_report_launch"],
+    "salesObjections": ["We buy analyst reports already.", "We only need quarterly market research."]
+  },
+  {
+    "id": "comp_opsmatrix",
+    "name": "OpsMatrix AI",
+    "category": "AI operations assistant",
+    "positioning": "AI workflows for sales, support, and operations teams.",
+    "strengths": ["broad AI automation story", "clear productivity pitch", "likely easy for non-technical buyers"],
+    "weaknesses": ["generic positioning", "not game-specific", "limited market intelligence narrative"],
+    "watchedSignals": ["sig_opsmatrix_enterprise_push"],
+    "salesObjections": ["Generic AI assistants are cheaper.", "We can use ChatGPT directly."]
+  }
+]

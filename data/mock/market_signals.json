@@ -1,0 +1,74 @@
+[
+  {
+    "id": "sig_novafox_hiring_liveops",
+    "title": "NovaFox Studios increases hiring for live-ops and analytics roles",
+    "category": "hiring",
+    "sourceType": "mock_news",
+    "entityNames": ["NovaFox Studios"],
+    "summary": "Synthetic market signal suggests NovaFox is preparing for a live-ops-heavy launch cycle and may need better retention and operational intelligence.",
+    "detectedAt": "2026-05-04T08:00:00.000Z",
+    "confidence": 0.82,
+    "impactScore": 86,
+    "evidenceRefs": ["mock_news:novafox_liveops_hiring_2026_05_04"]
+  },
+  {
+    "id": "sig_market_retention_pressure",
+    "title": "Retention pressure rises across mid-market game studios",
+    "category": "market_report",
+    "sourceType": "public_summary",
+    "entityNames": ["Mid-market game studios"],
+    "summary": "Public-source-inspired summary: game studios are increasingly focused on retention, launch efficiency, and faster product feedback loops.",
+    "detectedAt": "2026-05-04T08:15:00.000Z",
+    "confidence": 0.74,
+    "impactScore": 79,
+    "evidenceRefs": ["source_notes:game_studio_retention_trends"]
+  },
+  {
+    "id": "sig_arcadia_portfolio_expansion",
+    "title": "Arcadia Playworks expands portfolio strategy",
+    "category": "partnership",
+    "sourceType": "synthetic_internal",
+    "entityNames": ["Arcadia Playworks"],
+    "summary": "Synthetic CRM note indicates Arcadia is evaluating tools that help compare portfolio performance and competitor activity across several upcoming launches.",
+    "detectedAt": "2026-05-04T09:00:00.000Z",
+    "confidence": 0.9,
+    "impactScore": 88,
+    "evidenceRefs": ["crm_note:arcadia_eval_call_2026_05_03"]
+  },
+  {
+    "id": "sig_competitor_pricing_update",
+    "title": "DataPulse Gaming updates pricing page toward publisher bundles",
+    "category": "competitor_update",
+    "sourceType": "mock_news",
+    "entityNames": ["DataPulse Gaming"],
+    "summary": "Synthetic competitor watch signal: DataPulse appears to be moving from single-title analytics toward publisher-level bundles.",
+    "detectedAt": "2026-05-04T09:30:00.000Z",
+    "confidence": 0.77,
+    "impactScore": 73,
+    "evidenceRefs": ["mock_competitor:data_pulse_pricing_snapshot"]
+  },
+  {
+    "id": "sig_pixelguild_support_spike",
+    "title": "PixelGuild pilot sees repeated reporting export questions",
+    "category": "support_spike",
+    "sourceType": "synthetic_internal",
+    "entityNames": ["PixelGuild Interactive"],
+    "summary": "Synthetic support data shows repeated questions around weekly reporting exports, suggesting onboarding friction and possible product documentation gaps.",
+    "detectedAt": "2026-05-04T10:00:00.000Z",
+    "confidence": 0.86,
+    "impactScore": 68,
+    "evidenceRefs": ["support_cluster:pixelguild_reporting_exports"]
+  },
+  {
+    "id": "sig_luminary_partner_push",
+    "title": "Publishers increase co-development partner searches",
+    "category": "market_report",
+    "sourceType": "public_summary",
+    "entityNames": ["Luminary Games", "Game publishers"],
+    "summary": "Public-source-inspired summary: publishers are monitoring external co-development partners more actively, creating a sales angle for studios that can track demand signals.",
+    "detectedAt": "2026-05-04T10:20:00.000Z",
+    "confidence": 0.71,
+    "impactScore": 76,
+    "evidenceRefs": ["source_notes:co_development_market_signals"]
+  }
+]

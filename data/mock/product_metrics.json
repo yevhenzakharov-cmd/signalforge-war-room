@@ -1,0 +1,46 @@
+[
+  {
+    "id": "metric_activation_rate",
+    "name": "Pilot Activation Rate",
+    "area": "Activation",
+    "currentValue": 61,
+    "previousValue": 68,
+    "unit": "percent",
+    "trend": "down",
+    "riskLevel": "medium",
+    "summary": "Activation declined compared with the previous period, mostly due to setup friction in reporting and account configuration."
+  },
+  {
+    "id": "metric_briefing_generation",
+    "name": "Weekly Briefings Generated",
+    "area": "Retention",
+    "currentValue": 42,
+    "previousValue": 35,
+    "unit": "count",
+    "trend": "up",
+    "riskLevel": "low",
+    "summary": "Briefing usage increased, suggesting that users understand the value of recurring intelligence workflows."
+  },
+  {
+    "id": "metric_support_resolution_days",
+    "name": "Average Support Resolution Time",
+    "area": "Support",
+    "currentValue": 2.8,
+    "previousValue": 1.9,
+    "unit": "days",
+    "trend": "up",
+    "riskLevel": "high",
+    "summary": "Resolution time increased, driven by repeated reporting export questions and unclear onboarding documentation."
+  },
+  {
+    "id": "metric_pipeline_influenced",
+    "name": "Pipeline Influenced by Intelligence Workflows",
+    "area": "Revenue",
+    "currentValue": 455000,
+    "previousValue": 390000,
+    "unit": "usd",
+    "trend": "up",
+    "riskLevel": "low",
+    "summary": "Pipeline influenced by account dossiers and competitor-watch workflows increased across game studio and publisher segments."
+  }
+]

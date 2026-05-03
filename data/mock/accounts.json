@@ -1,0 +1,58 @@
+[
+  {
+    "id": "acct_novafox",
+    "name": "NovaFox Studios",
+    "segment": "Mid-market game studio",
+    "region": "Europe",
+    "stage": "Discovery",
+    "pipelineValueUsd": 84000,
+    "fitScore": 87,
+    "healthScore": 72,
+    "ownerTeam": "Sales",
+    "painPoints": ["retention visibility", "fragmented analytics", "launch planning"],
+    "recommendedAngle": "Position SignalForge-style intelligence as a way to unify launch signals, retention risks, and market movement before a major release.",
+    "linkedSignalIds": ["sig_novafox_hiring_liveops", "sig_market_retention_pressure"]
+  },
+  {
+    "id": "acct_arcadia",
+    "name": "Arcadia Playworks",
+    "segment": "Mobile game publisher",
+    "region": "North America",
+    "stage": "Evaluation",
+    "pipelineValueUsd": 125000,
+    "fitScore": 91,
+    "healthScore": 81,
+    "ownerTeam": "Partnerships",
+    "painPoints": ["portfolio prioritization", "competitive launch tracking", "publisher reporting"],
+    "recommendedAngle": "Lead with portfolio-level market intelligence and automated competitor watch for live game operations.",
+    "linkedSignalIds": ["sig_arcadia_portfolio_expansion", "sig_competitor_pricing_update"]
+  },
+  {
+    "id": "acct_pixelguild",
+    "name": "PixelGuild Interactive",
+    "segment": "Indie game studio",
+    "region": "United Kingdom",
+    "stage": "Pilot",
+    "pipelineValueUsd": 36000,
+    "fitScore": 78,
+    "healthScore": 64,
+    "ownerTeam": "Customer Success",
+    "painPoints": ["small team bandwidth", "manual market research", "support ticket clustering"],
+    "recommendedAngle": "Frame the system as an analyst-in-a-box that reduces manual research and turns support patterns into weekly product decisions.",
+    "linkedSignalIds": ["sig_pixelguild_support_spike"]
+  },
+  {
+    "id": "acct_luminary",
+    "name": "Luminary Games",
+    "segment": "AAA-adjacent outsourcing and co-development studio",
+    "region": "Eastern Europe",
+    "stage": "Prospect",
+    "pipelineValueUsd": 210000,
+    "fitScore": 84,
+    "healthScore": 70,
+    "ownerTeam": "Sales",
+    "painPoints": ["enterprise sales targeting", "co-development opportunity tracking", "market positioning"],
+    "recommendedAngle": "Use competitor and market signal monitoring to identify publishers actively investing in co-development partnerships.",
+    "linkedSignalIds": ["sig_luminary_partner_push"]
+  }
+]

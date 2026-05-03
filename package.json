@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint:types": "tsc --noEmit"
+    "lint:types": "tsc --noEmit",
+    "data:check": "tsx src/cli/index.ts data:check"
   },
   "keywords": [
     "ai-agents",

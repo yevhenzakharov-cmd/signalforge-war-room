@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ticket_1001",
+    "accountId": "acct_pixelguild",
+    "theme": "reporting_exports",
+    "severity": "medium",
+    "summary": "Customer asked why weekly reporting export does not match dashboard filters.",
+    "status": "open",
+    "createdAt": "2026-05-03T11:25:00.000Z"
+  },
+  {
+    "id": "ticket_1002",
+    "accountId": "acct_pixelguild",
+    "theme": "reporting_exports",
+    "severity": "medium",
+    "summary": "Pilot user requested a clearer explanation of which metrics are included in CSV export.",
+    "status": "in_progress",
+    "createdAt": "2026-05-03T14:10:00.000Z"
+  },
+  {
+    "id": "ticket_1003",
+    "accountId": "acct_arcadia",
+    "theme": "portfolio_dashboard",
+    "severity": "low",
+    "summary": "Partner asked whether multiple titles can be grouped by publisher portfolio.",
+    "status": "resolved",
+    "createdAt": "2026-05-02T09:45:00.000Z"
+  },
+  {
+    "id": "ticket_1004",
+    "accountId": "acct_novafox",
+    "theme": "launch_readiness",
+    "severity": "high",
+    "summary": "Prospect asked how quickly launch monitoring can detect negative retention or sentiment patterns after release.",
+    "status": "open",
+    "createdAt": "2026-05-04T07:35:00.000Z"
+  }
+]
