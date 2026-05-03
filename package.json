@@ -12,7 +12,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lint:types": "tsc --noEmit",
-    "data:check": "tsx src/cli/index.ts data:check"
+    "data:check": "tsx src/cli/index.ts data:check",
+    "briefing:demo": "tsx src/cli/index.ts briefing:demo"
   },
   "keywords": [
     "ai-agents",

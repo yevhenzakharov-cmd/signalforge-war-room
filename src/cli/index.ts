@@ -5,6 +5,7 @@ import chalk from "chalk";
 import { hasOpenAIKey } from "../config/env.js";
 import { loadAllMockData } from "../db/mock-data.js";
 import { projectMetadata } from "../schemas/project.js";
+import { runBriefingDemo } from "../workflows/briefing-demo.js";
 import {
   getAccountIntelligenceSnapshot,
   getCompetitorWatchSnapshot,
@@ -103,6 +104,41 @@ program
     console.log("");
 
     console.log(chalk.green("Tools demo completed."));
+  });
+
+program
+  .command("briefing:demo")
+  .description("Generate an AI executive briefing from deterministic tool outputs.")
+  .action(async () => {
+    console.log(chalk.bold("Generating SignalForge executive briefing..."));
+    console.log("");
+
+    const briefing = await runBriefingDemo();
+
+    console.log(chalk.bold(briefing.title));
+    console.log(`${chalk.cyan("Date:")} ${briefing.date}`);
+    console.log(`${chalk.cyan("Overall risk:")} ${briefing.overallRiskLevel}`);
+    console.log("");
+
+    console.log(chalk.cyan("Executive summary"));
+    console.log(briefing.executiveSummary);
+    console.log("");
+
+    console.log(chalk.cyan("Key sections"));
+    for (const section of briefing.sections) {
+      console.log(`- ${chalk.bold(section.title)}: ${section.finding}`);
+    }
+    console.log("");
+
+    console.log(chalk.cyan("Next best actions"));
+    for (const action of briefing.nextBestActions) {
+      console.log(
+        `- [${action.priority}] ${action.ownerTeam}: ${action.recommendation}`
+      );
+    }
+
+    console.log("");
+    console.log(chalk.green("Briefing demo completed."));
   });
 
 program.parse();
