@@ -1,0 +1,39 @@
+{
+  "name": "signalforge-war-room",
+  "version": "0.1.0",
+  "description": "A CLI-first multi-agent business intelligence war room built with TypeScript, synthetic data, tool-calling workflows, evals, and evidence-grounded outputs.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "sf": "tsx src/cli/index.ts",
+    "dev": "tsx watch src/cli/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint:types": "tsc --noEmit"
+  },
+  "keywords": [
+    "ai-agents",
+    "business-intelligence",
+    "typescript",
+    "openai",
+    "multi-agent",
+    "evals",
+    "synthetic-data",
+    "competitive-intelligence"
+  ],
+  "dependencies": {
+    "chalk": "latest",
+    "commander": "latest",
+    "dotenv": "latest",
+    "openai": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vitest": "latest"
+  }
+}
