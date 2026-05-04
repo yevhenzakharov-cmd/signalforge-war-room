@@ -54,7 +54,7 @@ button {
 .nav {
   display: grid;
   grid-template-columns: 260px 1fr 360px;
-  align-items: center;
+  align-items: start;
   gap: 24px;
   padding-bottom: 18px;
   border-bottom: 1px solid rgba(126, 153, 255, 0.12);
@@ -196,12 +196,12 @@ button {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 340px 360px;
   gap: 28px;
-  align-items: center;
-  padding: 34px 0 18px;
+  align-items: start;
+  padding: 0 0 18px;
 }
 
 .eyebrow {
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   color: #58a6ff;
   font-size: 13px;
   font-weight: 800;
@@ -218,7 +218,7 @@ p {
 h1 {
   max-width: 720px;
   margin-bottom: 16px;
-  font-size: clamp(56px, 7vw, 92px);
+  font-size: clamp(44px, 5.6vw, 72px);
   line-height: 0.98;
   letter-spacing: -0.075em;
 }
@@ -809,10 +809,156 @@ footer strong {
   }
 
   h1 {
-    font-size: 44px;
+    font-size: 38px;
   }
 
   .detail-drawer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Final visual polish: compact metrics, brighter accents, tighter layout */
+a {
+  text-decoration: none;
+}
+
+.hero-grid {
+  padding: 0 0 8px;
+}
+
+.metric-grid {
+  width: min(820px, 100%);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: -70px 0 18px;
+  position: relative;
+  z-index: 3;
+}
+
+.metric-card {
+  min-height: 72px;
+  grid-template-columns: 34px auto 1fr;
+  gap: 10px;
+  border-color: rgba(150, 120, 255, 0.36);
+  border-radius: 14px;
+  padding: 12px 14px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.22), transparent 35%),
+    linear-gradient(180deg, rgba(14, 22, 47, 0.92), rgba(5, 10, 24, 0.88));
+}
+
+.metric-card:hover,
+.record-card:hover,
+.action-card:hover,
+.timeline-row:hover {
+  border-color: rgba(32, 242, 163, 0.48);
+  box-shadow:
+    0 0 0 1px rgba(32, 242, 163, 0.08),
+    0 18px 60px rgba(32, 242, 163, 0.08);
+  transform: translateY(-1px);
+}
+
+.metric-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  font-size: 20px;
+}
+
+.metric-card strong {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.metric-card p {
+  color: #f7f9ff;
+  font-size: 13px;
+}
+
+.metric-card span {
+  color: #b8c4df;
+  font-size: 11px;
+}
+
+.metric-card .sparkline {
+  display: none;
+}
+
+.metric-card.purple .metric-icon {
+  color: #c084fc;
+  background: rgba(192, 132, 252, 0.18);
+  box-shadow: 0 0 24px rgba(192, 132, 252, 0.16);
+}
+
+.metric-card.blue .metric-icon {
+  color: #67e8f9;
+  background: rgba(103, 232, 249, 0.16);
+  box-shadow: 0 0 24px rgba(103, 232, 249, 0.14);
+}
+
+.metric-card.green .metric-icon {
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.16);
+  box-shadow: 0 0 24px rgba(52, 211, 153, 0.14);
+}
+
+.metric-card.violet .metric-icon {
+  color: #f0abfc;
+  background: rgba(240, 171, 252, 0.15);
+  box-shadow: 0 0 24px rgba(240, 171, 252, 0.14);
+}
+
+.metric-card.purple strong,
+.metric-card.violet strong {
+  color: #f5f3ff;
+}
+
+.metric-card.blue strong {
+  color: #e0f2fe;
+}
+
+.metric-card.green strong {
+  color: #dcfce7;
+}
+
+.mission-card dl a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(126, 153, 255, 0.12);
+  padding: 10px 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.mission-card dl a:hover dt,
+.mission-card dl a:hover dd {
+  color: var(--green);
+}
+
+.dashboard-grid {
+  margin-top: 4px;
+}
+
+.panel {
+  padding: 20px;
+}
+
+.timeline-list {
+  gap: 14px;
+}
+
+@media (max-width: 1180px) {
+  .metric-grid {
+    width: 100%;
+    margin: 0 0 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .metric-grid {
     grid-template-columns: 1fr;
   }
 }
