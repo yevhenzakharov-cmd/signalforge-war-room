@@ -210,7 +210,7 @@ export function DashboardShell({ activeView }: DashboardShellProps) {
           <>
             <SignalTimeline setDetail={setDetail} />
             <BriefingPanel openBriefingDetail={openBriefingDetail} />
-            <AgentPanel />
+            <AgentPanel setDetail={setDetail} />
           </>
         )}
 
@@ -218,7 +218,7 @@ export function DashboardShell({ activeView }: DashboardShellProps) {
           <>
             <SignalExplorer setDetail={setDetail} />
             <BriefingPanel openBriefingDetail={openBriefingDetail} />
-            <AgentPanel />
+            <AgentPanel setDetail={setDetail} />
           </>
         )}
 
@@ -226,7 +226,7 @@ export function DashboardShell({ activeView }: DashboardShellProps) {
           <>
             <AccountExplorer setDetail={setDetail} />
             <BriefingPanel openBriefingDetail={openBriefingDetail} />
-            <AgentPanel />
+            <AgentPanel setDetail={setDetail} />
           </>
         )}
 
@@ -234,7 +234,7 @@ export function DashboardShell({ activeView }: DashboardShellProps) {
           <>
             <CompetitorExplorer setDetail={setDetail} />
             <BriefingPanel openBriefingDetail={openBriefingDetail} />
-            <AgentPanel />
+            <AgentPanel setDetail={setDetail} />
           </>
         )}
 
@@ -242,7 +242,7 @@ export function DashboardShell({ activeView }: DashboardShellProps) {
           <>
             <BriefingPanel openBriefingDetail={openBriefingDetail} expanded />
             <SignalTimeline setDetail={setDetail} compact />
-            <AgentPanel />
+            <AgentPanel setDetail={setDetail} />
           </>
         )}
 
@@ -250,30 +250,38 @@ export function DashboardShell({ activeView }: DashboardShellProps) {
           <>
             <SystemPanel onRun={openPipelineDetail} />
             <BriefingPanel openBriefingDetail={openBriefingDetail} />
-            <AgentPanel />
+            <AgentPanel setDetail={setDetail} />
           </>
         )}
       </section>
 
       {detail && (
-        <section className="detail-drawer">
-          <div>
-            <p className="panel-kicker">{detail.label}</p>
-            <h2>{detail.title}</h2>
-            <p>{detail.body}</p>
+        <div className="detail-backdrop" onClick={() => setDetail(null)}>
+          <section className="detail-modal" onClick={(event) => event.stopPropagation()}>
+            <button
+              className="detail-close"
+              onClick={() => setDetail(null)}
+              aria-label="Close detail panel"
+            >
+              ×
+            </button>
 
-            <dl>
-              {detail.meta.map(([key, value]) => (
-                <div key={key}>
-                  <dt>{key}</dt>
-                  <dd>{value}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
+            <div>
+              <p className="panel-kicker">{detail.label}</p>
+              <h2>{detail.title}</h2>
+              <p>{detail.body}</p>
 
-          <button onClick={() => setDetail(null)}>Close</button>
-        </section>
+              <dl>
+                {detail.meta.map(([key, value]) => (
+                  <div key={key}>
+                    <dt>{key}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </section>
+        </div>
       )}
 
       <footer>
@@ -508,7 +516,7 @@ function BriefingPanel({
   );
 }
 
-function AgentPanel() {
+function AgentPanel({ setDetail }: { setDetail: (detail: Detail) => void }) {
   return (
     <aside className="panel agent-panel">
       <div className="panel-head">
@@ -520,13 +528,29 @@ function AgentPanel() {
 
       <div className="agent-list">
         {agents.map(([num, name, copy]) => (
-          <div className="agent-row" key={name}>
+          <button
+            className="agent-row"
+            key={name}
+            onClick={() =>
+              setDetail({
+                label: `Agent ${num ?? ""}`,
+                title: name ?? "Agent",
+                body: copy ?? "Agent workflow detail.",
+                meta: [
+                  ["Runtime mode", "CLI-first"],
+                  ["Data source", "Synthetic/public-style"],
+                  ["Validation", name === "Evidence Judge" ? "Deterministic checks" : "Typed workflow"],
+                  ["Output", name === "Output Writer" ? "Markdown + JSON" : "Briefing-ready signal"]
+                ]
+              })
+            }
+          >
             <span>{num}</span>
             <div>
               <strong>{name}</strong>
               <p>{copy}</p>
             </div>
-          </div>
+          </button>
         ))}
       </div>
     </aside>

@@ -962,3 +962,117 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+/* Clickable modal system */
+.detail-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(1, 4, 12, 0.72);
+  backdrop-filter: blur(18px);
+}
+
+.detail-modal {
+  position: relative;
+  width: min(940px, 100%);
+  border: 1px solid rgba(139, 92, 246, 0.48);
+  border-radius: 22px;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(139, 92, 246, 0.22), transparent 32%),
+    linear-gradient(180deg, rgba(16, 24, 54, 0.98), rgba(5, 10, 24, 0.98));
+  box-shadow:
+    0 40px 140px rgba(0, 0, 0, 0.58),
+    0 0 0 1px rgba(32, 242, 163, 0.08);
+}
+
+.detail-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(126, 153, 255, 0.22);
+  border-radius: 999px;
+  color: #f7f9ff;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.detail-close:hover {
+  border-color: rgba(32, 242, 163, 0.55);
+  color: var(--green);
+}
+
+.detail-modal h2 {
+  max-width: 760px;
+  margin: 8px 0 14px;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.detail-modal p {
+  max-width: 820px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.detail-modal dl {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0 0;
+}
+
+.detail-modal dl div {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.detail-modal dt {
+  color: var(--muted2);
+  font-size: 12px;
+}
+
+.detail-modal dd {
+  margin: 6px 0 0;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.agent-row {
+  width: 100%;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  text-align: left;
+}
+
+.agent-row:hover strong {
+  color: var(--green);
+}
+
+@media (max-width: 900px) {
+  .detail-modal dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .detail-modal dl {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-modal {
+    padding: 22px;
+  }
+}
