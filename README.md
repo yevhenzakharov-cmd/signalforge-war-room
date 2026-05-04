@@ -1,4 +1,5 @@
 # SignalForge War Room
+![CI](https://github.com/yevhenzakharov-cmd/signalforge-war-room/actions/workflows/ci.yml/badge.svg)
 
 SignalForge War Room is a CLI-first, API-ready multi-agent business intelligence demo system.
 
