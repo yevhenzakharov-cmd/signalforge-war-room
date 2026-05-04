@@ -2,23 +2,31 @@
 
 SignalForge War Room is a CLI-first, API-ready multi-agent business intelligence demo system.
 
-It simulates how a DappRadar-like company could use AI agents to monitor market signals, account activity, competitor movement, support/product risk, and executive decision workflows.
+It simulates how a DappRadar-like company could use AI agents to monitor market signals, account activity, competitor movement, support/product risk, and executive decision workflows using only synthetic and public-style data.
 
-This is an original public demo project. It uses only public-source summaries, synthetic internal data, and mock business datasets. It does not contain private DappRadar code, prompts, data, workflows, APIs, or confidential systems.
+## Why This Exists
 
-## Current Build Mode
+This repo demonstrates production-style AI-agent engineering patterns:
 
-- CLI-first
-- UI optional
-- Synthetic data only
-- OpenAI-first
-- TypeScript-first
+- typed synthetic data
+- Zod schema validation
+- deterministic tool functions
+- OpenAI Structured Outputs
+- agent workflow orchestration
+- evidence judging
+- local output persistence
+- tests and documentation
 
-## Local Commands
+This is an original public demo project. It does not contain private DappRadar code, private company data, private APIs, confidential workflows, private prompts, or real customer records.
 
-Run these commands locally:
+## Core Workflow
 
-pnpm install
-pnpm typecheck
-pnpm test
-pnpm sf health
+```mermaid
+flowchart TD
+  A[Synthetic Data] --> B[Zod Schemas]
+  B --> C[Deterministic Tools]
+  C --> D[Executive Briefer Agent]
+  D --> E[Structured Briefing]
+  E --> F[Sanitizer Guardrail]
+  F --> G[Evidence Judge]
+  G --> H[Saved Markdown and JSON Outputs]
