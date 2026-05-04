@@ -7,6 +7,7 @@ import { loadAllMockData } from "../db/mock-data.js";
 import { projectMetadata } from "../schemas/project.js";
 import { runBriefingDemo } from "../workflows/briefing-demo.js";
 import { runBriefingJudgeDemo } from "../workflows/briefing-judge-demo.js";
+import { saveBriefingOutputs } from "../output/briefing-writer.js";
 import {
   getAccountIntelligenceSnapshot,
   getCompetitorWatchSnapshot,
@@ -150,6 +151,7 @@ program
     console.log("");
 
     const result = await runBriefingJudgeDemo();
+    const outputPaths = await saveBriefingOutputs(result.briefing, result.judge);
 
     console.log(chalk.bold(result.briefing.title));
     console.log(`${chalk.cyan("Overall risk:")} ${result.briefing.overallRiskLevel}`);
@@ -166,6 +168,12 @@ program
       const status = check.passed ? chalk.green("PASS") : chalk.red("FAIL");
       console.log(`- ${status} ${check.name}: ${check.message}`);
     }
+
+    console.log("");
+    console.log(chalk.cyan("Saved outputs"));
+    console.log(`Briefing Markdown: ${outputPaths.briefingMarkdownPath}`);
+    console.log(`Briefing JSON: ${outputPaths.briefingJsonPath}`);
+    console.log(`Judge JSON: ${outputPaths.judgeJsonPath}`);
 
     console.log("");
     console.log(chalk.green("Briefing judge completed."));
