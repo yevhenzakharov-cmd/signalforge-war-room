@@ -6,6 +6,7 @@ import { hasOpenAIKey } from "../config/env.js";
 import { loadAllMockData } from "../db/mock-data.js";
 import { projectMetadata } from "../schemas/project.js";
 import { runBriefingDemo } from "../workflows/briefing-demo.js";
+import { runBriefingJudgeDemo } from "../workflows/briefing-judge-demo.js";
 import {
   getAccountIntelligenceSnapshot,
   getCompetitorWatchSnapshot,
@@ -139,6 +140,35 @@ program
 
     console.log("");
     console.log(chalk.green("Briefing demo completed."));
+  });
+
+program
+  .command("briefing:judge")
+  .description("Generate an AI executive briefing and run deterministic evidence checks.")
+  .action(async () => {
+    console.log(chalk.bold("Generating and judging SignalForge briefing..."));
+    console.log("");
+
+    const result = await runBriefingJudgeDemo();
+
+    console.log(chalk.bold(result.briefing.title));
+    console.log(`${chalk.cyan("Overall risk:")} ${result.briefing.overallRiskLevel}`);
+    console.log("");
+
+    console.log(chalk.cyan("Evidence Judge"));
+    console.log(`Passed: ${result.judge.passed ? "yes" : "no"}`);
+    console.log(`Score: ${result.judge.score}/100`);
+    console.log(`Summary: ${result.judge.summary}`);
+    console.log("");
+
+    console.log(chalk.cyan("Checks"));
+    for (const check of result.judge.checks) {
+      const status = check.passed ? chalk.green("PASS") : chalk.red("FAIL");
+      console.log(`- ${status} ${check.name}: ${check.message}`);
+    }
+
+    console.log("");
+    console.log(chalk.green("Briefing judge completed."));
   });
 
 program.parse();

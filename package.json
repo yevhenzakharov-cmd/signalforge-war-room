@@ -13,7 +13,8 @@
     "test:watch": "vitest",
     "lint:types": "tsc --noEmit",
     "data:check": "tsx src/cli/index.ts data:check",
-    "briefing:demo": "tsx src/cli/index.ts briefing:demo"
+    "briefing:demo": "tsx src/cli/index.ts briefing:demo",
+    "briefing:judge": "tsx src/cli/index.ts briefing:judge"
   },
   "keywords": [
     "ai-agents",

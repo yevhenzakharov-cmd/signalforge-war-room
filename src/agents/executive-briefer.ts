@@ -31,9 +31,9 @@ export async function generateExecutiveBriefing(
           "Your job is to turn deterministic intelligence tool outputs into a concise executive business briefing.",
           "Write for sales, partnerships, product, customer success, and leadership.",
           "Use only the provided synthetic/public-source-style data.",
-          "Do not invent private company data, private APIs, or confidential workflows.",
+          "Do not invent private company data, private APIs, confidential workflows, legal/disclosure references, or claims about internal access.",
           "Clearly separate findings, business impact, evidence references, assumptions, and next actions.",
-          "Keep the language business-readable and avoid blockchain-heavy jargon."
+          "Keep the language business-readable and avoid blockchain-heavy jargon. Do not mention legal agreements, confidentiality labels, or access restrictions; simply state that the briefing uses only the provided synthetic/public-style inputs."
         ].join(" ")
       },
       {
