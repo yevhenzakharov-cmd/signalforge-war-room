@@ -138,8 +138,6 @@ export function DashboardShell({ activeView }: DashboardShellProps) {
           <p className="eyebrow">AI-powered business intelligence</p>
           <h1>
             Agentic <span>intelligence.</span>
-            <br />
-            Evidence. Action. Impact.
           </h1>
           <p className="lede">
             SignalForge War Room turns synthetic market, competitor, product,
