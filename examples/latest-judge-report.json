@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "score": 100,
+  "checks": [
+    {
+      "name": "executive_summary",
+      "passed": true,
+      "message": "Executive summary is present and sufficiently detailed."
+    },
+    {
+      "name": "section_evidence_refs",
+      "passed": true,
+      "message": "Every section includes at least one evidence reference."
+    },
+    {
+      "name": "section_recommended_actions",
+      "passed": true,
+      "message": "Every section includes recommended actions."
+    },
+    {
+      "name": "next_best_actions",
+      "passed": true,
+      "message": "Briefing includes multiple next-best actions."
+    },
+    {
+      "name": "assumptions_separated",
+      "passed": true,
+      "message": "Assumptions are separated into their own field."
+    },
+    {
+      "name": "no_private_data_language",
+      "passed": true,
+      "message": "No private-data language detected."
+    }
+  ],
+  "summary": "Evidence judge passed with score 100/100."
+}
