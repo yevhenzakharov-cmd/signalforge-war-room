@@ -14,7 +14,10 @@
     "lint:types": "tsc --noEmit",
     "data:check": "tsx src/cli/index.ts data:check",
     "briefing:demo": "tsx src/cli/index.ts briefing:demo",
-    "briefing:judge": "tsx src/cli/index.ts briefing:judge"
+    "briefing:judge": "tsx src/cli/index.ts briefing:judge",
+    "web:dev": "next dev",
+    "web:build": "next build",
+    "web:start": "next start"
   },
   "keywords": [
     "ai-agents",
@@ -30,11 +33,16 @@
     "chalk": "latest",
     "commander": "latest",
     "dotenv": "latest",
+    "next": "^16.2.4",
     "openai": "latest",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
     "zod": "latest"
   },
   "devDependencies": {
     "@types/node": "latest",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "tsx": "latest",
     "typescript": "latest",
     "vitest": "latest"
